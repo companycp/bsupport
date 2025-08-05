@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bitcoin.com Wallet Support</title>
+  <style>
+    :root {
+      --primary: #f7931a;
+      --bg-dark: #0e0e10;
+      --bg-card: #1b1b1e;
+      --text-light: #ffffff;
+      --text-muted: #999;
+      --radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #141417;
+      padding: 30px 20px;
+      position: fixed;
+      height: 100%;
+      border-right: 1px solid #222;
+    }
+
+    .sidebar h2 {
+      font-size: 20px;
+      margin-bottom: 40px;
+      color: var(--primary);
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      margin: 20px 0;
+      font-size: 16px;
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+
+    .sidebar ul li:hover {
+      color: var(--primary);
+    }
+
+    .main {
+      margin-left: 250px;
+      width: calc(100% - 250px);
+      padding: 30px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .search-input input {
+      padding: 10px 14px;
+      border-radius: var(--radius);
+      border: none;
+      outline: none;
+      font-size: 15px;
+      width: 250px;
+      background-color: #2a2a2e;
+      color: #fff;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background-color: var(--bg-card);
+      border-radius: var(--radius);
+      padding: 25px 20px;
+      transition: 0.3s;
+      border: 1px solid transparent;
+    }
+
+    .card:hover {
+      border: 1px solid var(--primary);
+      box-shadow: 0 0 10px rgba(247, 147, 26, 0.2);
+    }
+
+    .card h3 {
+      font-size: 17px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .card .meta {
+      font-size: 13px;
+      color: #777;
+    }
+
+    footer {
+      text-align: center;
+      color: #888;
+      font-size: 13px;
+      padding: 20px;
+      border-top: 1px solid #222;
+      margin-top: 40px;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .sidebar {
+        display: none;
+      }
+
+      .main {
+        margin: 0;
+        width: 100%;
+        padding: 20px;
+      }
+
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .search-input input {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar">
+    <h2>Support Center</h2>
+    <ul>
+      <li>Dashboard</li>
+      <li>Wallet Help</li>
+      <li>Buying Crypto</li>
+      <li>Web3 & DApps</li>
+      <li>Security & Scams</li>
+      <li>VERSE Token</li>
+      <li>Explorer</li>
+      <li>Settings</li>
+    </ul>
+  </aside>
+
+  <!-- Main Content Area -->
+  <main class="main">
+    <div class="header">
+      <h1>Bitcoin.com Wallet Support</h1>
+      <div class="search-input">
+        <input type="text" placeholder="Search guides, issues, FAQs..." />
+      </div>
+    </div>
+
+    <!-- Support Sections as Wallet Cards -->
+    <div class="grid">
+      <div class="card">
+        <h3>🔰 Getting Started</h3>
+        <p>New to crypto? Learn wallets, private keys, and backup essentials.</p>
+        <div class="meta">2 authors • 31 articles</div>
+      </div>
+
+      <div class="card">
+        <h3>💳 Buy Bitcoin</h3>
+        <p>Use your card, Apple Pay, or bank to buy BTC safely and easily.</p>
+        <div class="meta">1 author • 4 articles</div>
+      </div>
+
+      <div class="card">
+        <h3>📲 Wallet App</h3>
+        <p>Everything about sending, receiving, and managing assets in-app.</p>
+        <div class="meta">1 author • 9 articles</div>
+      </div>
+
+      <div class="card">
+        <h3>🌐 Web3 Features</h3>
+        <p>Connect and transact securely in DeFi and decentralized platforms.</p>
+        <div class="meta">1 author • 5 articles</div>
+      </div>
+
+      <div class="card">
+        <h3>🛡️ Scam Prevention</h3>
+        <p>Identify fake links, recovery frauds, and impersonation threats.</p>
+        <div class="meta">1 author • 1 article</div>
+      </div>
+
+      <div class="card">
+        <h3>💸 Selling BTC</h3>
+        <p>Learn to sell Bitcoin and withdraw to local currencies seamlessly.</p>
+        <div class="meta">1 author • 1 article</div>
+      </div>
+
+      <div class="card">
+        <h3>🔍 Explorer Tools</h3>
+        <p>Track transactions or addresses using our block explorer.</p>
+        <div class="meta">1 author • 1 article</div>
+      </div>
+
+      <div class="card">
+        <h3>📦 Other Products</h3>
+        <p>Staking, cloud services, and new wallet ecosystem features.</p>
+        <div class="meta">2 authors • 8 articles</div>
+      </div>
+
+      <div class="card">
+        <h3>💠 VERSE Token</h3>
+        <p>Utility, staking, rewards and usage within the Bitcoin.com ecosystem.</p>
+        <div class="meta">2 authors • 29 articles</div>
+      </div>
+
+      <div class="card">
+        <h3>🖥️ Web Wallet</h3>
+        <p>Access and manage funds online without downloading the app.</p>
+        <div class="meta">1 author • 1 article</div>
+      </div>
+    </div>
+
+    <footer>
+      &copy; 2025 Bitcoin.com — Professional Wallet Support Interface
+    </footer>
+  </main>
+</body>
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = '18d4a07b3db3a9528defa22815f802b25e1b434f';
+window.smartsupp||(function(d) {
+  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+  c.type='text/javascript';c.charset='utf-8';c.async=true;
+  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
+<noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+</html>
