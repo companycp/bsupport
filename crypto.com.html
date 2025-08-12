@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Crypto.com Support</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      background-color: #f5f7fa;
+      color: #333;
+      min-height: 100vh;
+    }
+
+    aside {
+      width: 240px;
+      background-color: #ffffff;
+      border-right: 1px solid #ddd;
+      padding: 2rem 1rem;
+      height: 100vh;
+      position: fixed;
+    }
+
+    aside h2 {
+      color: #0050aa;
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    aside nav a {
+      display: block;
+      padding: 0.8rem 1rem;
+      margin-bottom: 0.5rem;
+      color: #333;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s;
+      cursor: pointer;
+    }
+
+    aside nav a:hover,
+    aside nav a.active {
+      background-color: #e0f0ff;
+      font-weight: bold;
+    }
+
+    main {
+      margin-left: 240px;
+      padding: 2rem;
+      flex: 1;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      margin-bottom: 2rem;
+    }
+
+    .header h1 {
+      font-size: 2rem;
+      color: #0050aa;
+    }
+
+    .search-bar {
+      margin: 1rem 0;
+    }
+
+    .search-bar input {
+      width: 100%;
+      max-width: 500px;
+      padding: 0.8rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background-color: #fff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h3 {
+      color: #0050aa;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.85rem;
+      color: #888;
+      margin-top: auto;
+    }
+
+    .support-fab {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #0050aa;
+      color: white;
+      padding: 0.9rem 1.2rem;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      z-index: 100;
+    }
+
+    .support-fab:hover {
+      background-color: #003e8a;
+    }
+  </style>
+</head>
+<body>
+  <aside>
+    <h2>Crypto.com</h2>
+    <nav id="sidebar-nav">
+      <a href="#" data-section="home" class="active">Home</a>
+      <a href="#" data-section="account-help">Account Help</a>
+      <a href="#" data-section="app-features">App Features</a>
+      <a href="#" data-section="card-issues">Card Issues</a>
+      <a href="#" data-section="security">Security</a>
+    </nav>
+  </aside>
+
+  <main>
+    <div class="header">
+      <h1 id="section-title">Help Center</h1>
+      <div class="search-bar" id="search-container">
+        <input type="text" placeholder="Search help topics..." />
+      </div>
+    </div>
+
+    <div id="content">
+      <!-- Default home content -->
+      <div class="categories">
+        <div class="card">
+          <h3>Account Setup</h3>
+          <p>Creating and verifying your Crypto.com account.</p>
+        </div>
+        <div class="card">
+          <h3>Crypto Wallet</h3>
+          <p>How to deposit, withdraw, and manage your crypto.</p>
+        </div>
+        <div class="card">
+          <h3>Crypto.com Card</h3>
+          <p>Visa card delivery, activation, and usage support.</p>
+        </div>
+        <div class="card">
+          <h3>2FA & Security</h3>
+          <p>Securing your account with two-factor authentication.</p>
+        </div>
+        <div class="card">
+          <h3>Trading & Fees</h3>
+          <p>Learn about exchange fees, spreads, and trading tools.</p>
+        </div>
+        <div class="card">
+          <h3>Still Need Help?</h3>
+          <p>Reach out to our support team for personal assistance.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      &copy; 2025 Crypto.com
+    </footer>
+  </main>
+
+  <button class="support-fab" onclick="alert('Opening live support...')">Support</button>
+
+  <script>
+    const navLinks = document.querySelectorAll('#sidebar-nav a');
+    const content = document.getElementById('content');
+    const sectionTitle = document.getElementById('section-title');
+    const searchContainer = document.getElementById('search-container');
+
+    const sections = {
+      'home': `
+        <div class="categories">
+          <div class="card">
+            <h3>Account Setup</h3>
+            <p>Creating and verifying your Crypto.com account.</p>
+          </div>
+          <div class="card">
+            <h3>Crypto Wallet</h3>
+            <p>How to deposit, withdraw, and manage your crypto.</p>
+          </div>
+          <div class="card">
+            <h3>Crypto.com Card</h3>
+            <p>Visa card delivery, activation, and usage support.</p>
+          </div>
+          <div class="card">
+            <h3>2FA & Security</h3>
+            <p>Securing your account with two-factor authentication.</p>
+          </div>
+          <div class="card">
+            <h3>Trading & Fees</h3>
+            <p>Learn about exchange fees, spreads, and trading tools.</p>
+          </div>
+          <div class="card">
+            <h3>Still Need Help?</h3>
+            <p>Reach out to our support team for personal assistance.</p>
+          </div>
+        </div>
+      `,
+      'account-help': `
+        <h2>Account Help</h2>
+        <p>Here you can find information about account setup, verification, and troubleshooting.</p>
+        <ul>
+          <li>How to create an account</li>
+          <li>Account verification process</li>
+          <li>Resetting your password</li>
+          <li>Managing account settings</li>
+        </ul>
+      `,
+      'app-features': `
+        <h2>App Features</h2>
+        <p>Learn about all the features of the Crypto.com app.</p>
+        <ul>
+          <li>Buying and selling cryptocurrencies</li>
+          <li>Staking and rewards</li>
+          <li>Setting price alerts</li>
+          <li>Managing your portfolio</li>
+        </ul>
+      `,
+      'card-issues': `
+        <h2>Card Issues</h2>
+        <p>Support for Crypto.com Visa card users.</p>
+        <ul>
+          <li>Card activation</li>
+          <li>Card delivery status</li>
+          <li>Reporting lost or stolen cards</li>
+          <li>Card usage and limits</li>
+        </ul>
+      `,
+      'security': `
+        <h2>Security</h2>
+        <p>Protect your account with security best practices.</p>
+        <ul>
+          <li>Two-factor authentication setup</li>
+          <li>Recognizing phishing attempts</li>
+          <li>Account recovery options</li>
+          <li>Privacy settings</li>
+        </ul>
+      `
+    };
+
+    function setActiveLink(section) {
+      navLinks.forEach(link => {
+        if (link.dataset.section === section) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    }
+
+    function loadSection(section) {
+      if (section === 'home') {
+        sectionTitle.textContent = 'Help Center';
+        searchContainer.style.display = 'block';
+      } else {
+        sectionTitle.textContent = section.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+        searchContainer.style.display = 'none';
+      }
+
+      content.innerHTML = sections[section] || '<p>Section not found.</p>';
+      setActiveLink(section);
+    }
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const section = link.dataset.section;
+        loadSection(section);
+      });
+    });
+  </script>
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = '87e44a672e66a8ac7f66a9758e73cdb721de513d';
+window.smartsupp||(function(d) {
+ var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+ s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+ c.type='text/javascript';c.charset='utf-8';c.async=true;
+ c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
+</body>
+</html>
